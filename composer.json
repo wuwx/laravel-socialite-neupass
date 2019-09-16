@@ -1,0 +1,28 @@
+{
+    "name": "wuwx/laravel-socialite-neupass",
+    "type": "library",
+    "keywords": ["laravel", "socialite", "neupass"],
+    "description": "",
+    "authors": [
+        {
+            "name": "Wu Weixin",
+            "email": "wuweixin@gmail.com"
+        }
+    ],
+    "require": {
+        "jasig/phpcas": "*",
+        "laravel/socialite": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wuwx\\LaravelSocialiteNeupass\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wuwx\\LaravelSocialiteNeupass\\NeupassServiceProvider"
+            ]
+        }
+    }
+}
