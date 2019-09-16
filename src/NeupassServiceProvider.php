@@ -13,7 +13,7 @@ class NeupassServiceProvider extends ServiceProvider
             return new class {
                 public function __construct()
                 {
-                    phpCAS::client(CAS_VERSION_2_0, "sso.neu.cn", 443, "cas");
+                    phpCAS::client(CAS_VERSION_2_0, "pass.neu.edu.cn", 443, "tpass");
                     phpCAS::setNoCasServerValidation();
                 }
                 public function redirect()
