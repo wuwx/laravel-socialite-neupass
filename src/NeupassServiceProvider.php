@@ -26,6 +26,7 @@ class NeupassServiceProvider extends ServiceProvider
                     phpCAS::forceAuthentication();
                     return (new User)->map([
                         'id' => phpCAS::getUser(),
+                        'name' => phpCAS::getAttribute('USER_NAME'),
                     ]);
                 }
             };
