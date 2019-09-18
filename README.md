@@ -7,6 +7,10 @@
 use Laravel\Socialite\Facades\Socialite;
 class LoginController extends Controller
 {
+    public function showLoginForm()
+    {
+        return redirect()->route("login.neupass");
+    }
     public function redirectToProvider()
     {
         return Socialite::driver('neupass')->redirect();
@@ -19,6 +23,6 @@ class LoginController extends Controller
 ```
 
 ```php
-Route::get('login/neupass', 'Auth\LoginController@redirectToProvider');
-Route::get('login/neupass/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('login/neupass', 'Auth\LoginController@redirectToProvider')->name("login.neupass");
+Route::get('login/neupass/callback', 'Auth\LoginController@handleProviderCallback')->name("login.neupass.callback");
 ```
