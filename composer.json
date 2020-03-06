@@ -3,6 +3,7 @@
     "type": "library",
     "keywords": ["laravel", "socialite", "neupass"],
     "description": "",
+    "license": "MIT",
     "authors": [
         {
             "name": "Wu Weixin",
