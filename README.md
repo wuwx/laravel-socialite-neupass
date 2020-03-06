@@ -13,7 +13,9 @@ class LoginController extends Controller
     }
     public function redirectToProvider()
     {
-        return Socialite::driver('neupass')->redirect();
+        return Socialite::driver('neupass')
+                        ->redirectUrl(request()->getUri() . "/callback")
+                        ->redirect();
     }
     public function handleProviderCallback()
     {
