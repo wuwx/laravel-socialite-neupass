@@ -35,6 +35,7 @@ class NeupassProvider implements ProviderContract
         return (new User)->map([
             'id' => phpCAS::getUser(),
             'name' => phpCAS::getAttribute('USER_NAME'),
+            'email' => phpCAS::getAttribute('EMAIL'),
         ]);
     }
 }
