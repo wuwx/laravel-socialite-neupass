@@ -2,7 +2,6 @@
 
 namespace Wuwx\LaravelSocialiteNeupass;
 
-use Illuminate\Support\Facades\Session;
 use Laravel\Socialite\Contracts\Provider as ProviderContract;
 use phpCAS;
 
