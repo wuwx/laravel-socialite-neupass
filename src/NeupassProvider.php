@@ -10,11 +10,7 @@ class NeupassProvider implements ProviderContract
 {
     public function __construct()
     {
-        session_set_save_handler(Session::getHandler());
-        ini_set("session.name", "NEUPASSSESSIONID");
-
         phpCAS::client(CAS_VERSION_2_0, "pass.neu.edu.cn", 443, "tpass");
-
         phpCAS::setNoCasServerValidation();
     }
 
