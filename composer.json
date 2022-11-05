@@ -10,13 +10,27 @@
             "email": "wuweixin@gmail.com"
         }
     ],
+    "config": {
+        "allow-plugins": false
+    },
     "require": {
-        "jasig/phpcas": "*",
-        "laravel/socialite": "*"
+        "php" : "^7.3|^8.0",
+        "jasig/phpcas": "~1.5.0",
+        "laravel/socialite": "*",
+        "illuminate/support": "^5.6|^6.0|^7.0|^8.0|^9.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0|^8.0|^9.0",
+        "orchestra/testbench": "^3.6|^4.0|^5.0|^6.0|^7.0"
     },
     "autoload": {
         "psr-4": {
             "Wuwx\\LaravelSocialiteNeupass\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wuwx\\LaravelSocialiteNeupass\\Test\\": "tests"
         }
     },
     "extra": {
@@ -25,5 +39,7 @@
                 "Wuwx\\LaravelSocialiteNeupass\\NeupassServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

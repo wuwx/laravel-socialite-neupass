@@ -3,7 +3,6 @@ namespace Wuwx\LaravelSocialiteNeupass;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Socialite\Facades\Socialite;
-use phpCAS;
 
 class NeupassServiceProvider extends ServiceProvider
 {
