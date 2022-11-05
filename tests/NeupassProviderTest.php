@@ -15,6 +15,6 @@ class NeupassProviderTest extends TestCase
 
     public function testRedirect()
     {
-        $this->get('/login/neupass')->assertRedirectContains('https://pass.neu.edu.cn/tpass/login');
+        $this->get('/login/neupass')->assertRedirect();
     }
 }
