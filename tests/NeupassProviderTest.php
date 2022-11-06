@@ -2,19 +2,13 @@
 
 namespace Wuwx\LaravelSocialiteNeupass\Test;
 
+use Illuminate\Http\RedirectResponse;
 use Laravel\Socialite\Facades\Socialite;
 
 class NeupassProviderTest extends TestCase
 {
-    protected function defineRoutes($router)
-    {
-        $router->get('/login/neupass', function () {
-            return Socialite::driver('neupass')->redirectUrl("http://localhost/login/neupass/callback")->redirect();
-        });
-    }
-
     public function testRedirect()
     {
-        $this->get('/login/neupass')->assertRedirect();
+        $this->assertInstanceOf(RedirectResponse::class, Socialite::driver('neupass')->redirectUrl('http://localhost')->redirect());
     }
 }
