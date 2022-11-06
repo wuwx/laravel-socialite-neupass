@@ -9,6 +9,8 @@ class NeupassProviderTest extends TestCase
 {
     public function testRedirect()
     {
-        $this->assertInstanceOf(RedirectResponse::class, Socialite::driver('neupass')->redirectUrl('http://localhost')->redirect());
+        $provider = Socialite::driver('neupass');
+        $provider->redirectUrl('http://localhost');
+        $this->assertInstanceOf(RedirectResponse::class, $provider->redirect());
     }
 }
