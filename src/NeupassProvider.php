@@ -9,7 +9,7 @@ class NeupassProvider implements ProviderContract
 {
     public function __construct()
     {
-        phpCAS::client(CAS_VERSION_2_0, "pass.neu.edu.cn", 443, "tpass");
+        phpCAS::client(CAS_VERSION_2_0, "pass.neu.edu.cn", 443, "tpass", url('/'));
         phpCAS::setNoCasServerValidation();
     }
 
