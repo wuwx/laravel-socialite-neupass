@@ -1,4 +1,5 @@
 <?php
+
 namespace Wuwx\LaravelSocialiteNeupass;
 
 use Illuminate\Support\ServiceProvider;
@@ -8,8 +9,8 @@ class NeupassServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        Socialite::extend('neupass', function() {
-            return new NeupassProvider();
+        Socialite::extend('neupass', function () {
+            return new NeupassProvider;
         });
     }
 

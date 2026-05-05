@@ -7,7 +7,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 class NeupassProviderTest extends TestCase
 {
-    public function testRedirect()
+    public function test_redirect()
     {
         $provider = Socialite::driver('neupass');
         $provider->redirectUrl('http://localhost');
